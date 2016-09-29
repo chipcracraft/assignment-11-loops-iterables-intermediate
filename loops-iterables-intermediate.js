@@ -3,6 +3,16 @@
  *
  * Write a function that calculates the sum of all the numbers in an array
  */
+ var sumOfArray = function(arraNumb){
+
+     		var listofNumbers = 0;
+
+     for (var i =0; i < arraNumb.length; i = i + 1) {
+             listofNumbers = listofNumbers + arraNumb[i]
+     }
+  				return listofNumbers;
+ }
+
 
 
 
@@ -15,11 +25,22 @@ console.assert(sumOfArray([10, 9, 8, 3, 4, 5, 6]) === 45);
 
 // Write a function maxOfArray() that takes an array of
 // numbers as an argument and finds the highest number.
+var maxOfArray = function(arryOfNumbers) {
+    var numnum = 0;
+    for (var i = 0; i < arryOfNumbers.length; i++) {
+        if (typeof arryOfNumbers[i] === 'string') {
+            return null ;
+        }
+        if (arryOfNumbers[i] > numnum) {
+            numnum = arryOfNumbers[i];
+        }
+    }
+    return numnum;
+}
 
-
-console.assert(maxOfArray([2,4,3]) === 4)
-console.assert(maxOfArray([10,9,8,100,7,6]) === 100)
-console.assert( maxOfArray([1,8,'bucklemyshoe', 7] === null ) )
+console.assert(maxOfArray([2,4,3]) === 4);
+console.assert(maxOfArray([10,9,8,100,7,6]) === 100);
+console.assert( maxOfArray([1,8,'bucklemyshoe', 7]) === null);
 
 /**
  * PART 2
@@ -28,9 +49,16 @@ console.assert( maxOfArray([1,8,'bucklemyshoe', 7] === null ) )
  * and returns true if it is a vowel, false otherwise.
  */
 
-function isVowel(symbol){
-    // YOUR CODE HERE
-}
+ function isVowel(symbol) {
+     if (typeof symbol === 'string') {
+         if (symbol.length === 1) {
+             if (symbol.toLowerCase() === 'a' || symbol.toLowerCase() === 'e' || symbol.toLowerCase() === 'i' || symbol.toLowerCase() === 'o' || symbol.toLowerCase() === 'u') {
+                 return true;
+             }
+         }
+     }
+     return false;
+ }
 
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);
