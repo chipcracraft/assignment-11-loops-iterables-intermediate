@@ -102,26 +102,25 @@ console.assert(reverseMe("we don't want no trouble") === "elbuort on tnaw t'nod 
  * - for every number that is a multiple of 3 and 5, return "FizZBuzZ"
  */
 
+ function fizzbuzz(num) {
+           var strFizz = ""
+   for (var i = 1; i <= num; i = i+1) {
+     if  (((i % 3) != 0) && ((i % 5) != 0)) {
+           strFizz += "."
+     } else if
+       (((i % 3) === 0) && ((i % 5) != 0)){
+       strFizz += "fizz";
+     } else if
+       (((i % 5) === 0) && ((i % 3) != 0)){
+       strFizz += "buzz";
+     } else if
+       (((i % 3) === 0) && ((i % 5) === 0 )){
+       strFizz += "FizZBuzZ";
+     }
+   }
+     return strFizz;
+ }
 
- var fizzbuzz = function(num) {
-          var strFizz = " ";
-  for (var i = 1; i < num; i = i+1) {
-
-    if  (((i % 3) != 0) && ((i % 5) != 0)) {
-        return ".";
-    } else if
-      (((i % 3) === 0) && ((i % 5) != 0)){
-      return "fizz";
-    } else if
-      (((i % 5) === 0) && ((i % 3) != 0)){
-      return "buzz";
-    } else if
-      (((i % 3) === 0) && ((i % 5) === 0 )){
-      return "FizzBuzz";
-    }
-  }
-}
-console.log(fizzbuzz(1));
 
 console.assert(fizzbuzz(1) === ".")
 console.assert(fizzbuzz(2) === "..")
