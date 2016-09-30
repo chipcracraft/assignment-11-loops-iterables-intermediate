@@ -102,24 +102,25 @@ console.assert(reverseMe("we don't want no trouble") === "elbuort on tnaw t'nod 
  * - for every number that is a multiple of 3 and 5, return "FizZBuzZ"
  */
 
- function fizzbuzz(num) {
+ var fizzbuzz =function (num) {
            var strFizz = ""
    for (var i = 1; i <= num; i = i+1) {
-     if  (((i % 3) != 0) && ((i % 5) != 0)) {
+     if  (i % 3 != 0 && i % 5 != 0) {
            strFizz += "."
      } else if
-       (((i % 3) === 0) && ((i % 5) != 0)){
+       (i % 3 === 0 && i % 5 != 0){
        strFizz += "fizz";
      } else if
-       (((i % 5) === 0) && ((i % 3) != 0)){
+       (i % 5 === 0 && i % 3 != 0){
        strFizz += "buzz";
      } else if
-       (((i % 3) === 0) && ((i % 5) === 0 )){
+       (i % 3 === 0 && i % 5 === 0 ){
        strFizz += "FizZBuzZ";
      }
    }
      return strFizz;
  }
+
 
 
 console.assert(fizzbuzz(1) === ".")
@@ -138,7 +139,8 @@ console.assert(fizzbuzz(20) === "..fizz.buzzfizz..fizzbuzz.fizz..FizZBuzZ..fizz.
  */
 
 function findLongestWord(sentence){
-    // YOUR CODE HERE
+    for ( var i =0; i < sentence.length; i = i + 1);
+
 }
 
 console.assert(findLongestWord("a book full of dogs") === "book")
