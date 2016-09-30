@@ -137,11 +137,41 @@ console.assert(fizzbuzz(20) === "..fizz.buzzfizz..fizzbuzz.fizz..FizZBuzZ..fizz.
  words and returns the longest word.
  * i.e. findLongestWord("a book full of dogs") should return "book"
  */
+ function findLongestWord(sentence){
+        var wordLength = 0;
+           var longestWord = "";
+ 			var splitLength
+            var arraOfWords = [];
+              var splitter = sentence.split(" ");
 
-function findLongestWord(sentence){
-    for ( var i =0; i < sentence.length; i = i + 1);
+              for ( var i =0; i < splitter.length; i = i + 1){
 
-}
+                  splitter[i] = removeApo(splitter[i])
+                  splitLength = splitter[i].length;
+                if (splitLength > wordLength){
+
+                wordLength = splitLength
+                longestWord = splitter[i]
+            }
+          }
+
+      return longestWord
+  }
+    var removeApo = function(str){
+          var wordy = 0
+          var stringy = ''
+
+          for (var i =0; i < str.length; i ++) {
+              if (str[i] === "'") {
+                 wordy = wordy - 1;
+          }  else {
+              stringy = stringy + str[i];
+
+          }
+        }
+        return stringy
+  }
+
 
 console.assert(findLongestWord("a book full of dogs") === "book")
 console.assert(findLongestWord("don't mess with Texas") === "Texas")
