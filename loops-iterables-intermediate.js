@@ -76,8 +76,20 @@ console.assert(isVowel("E") === true);
  */
 
 
-console.assert(reverse("books") === "skoob")
-console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
+ var reverseMe = function reverseMe(str){
+
+         var splitsy = str.split("");
+
+         splitsy = splitsy.reverse();
+
+         var joinSplit = splitsy.join("");
+
+         return joinSplit
+ }
+
+
+console.assert(reverseMe("books") === "skoob")
+console.assert(reverseMe("we don't want no trouble") === "elbuort on tnaw t'nod ew")
 
 
 /**
@@ -91,6 +103,25 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  */
 
 
+ var fizzbuzz = function(num) {
+          var strFizz = " ";
+  for (var i = 1; i < num; i = i+1) {
+
+    if  (((i % 3) != 0) && ((i % 5) != 0)) {
+        return ".";
+    } else if
+      (((i % 3) === 0) && ((i % 5) != 0)){
+      return "fizz";
+    } else if
+      (((i % 5) === 0) && ((i % 3) != 0)){
+      return "buzz";
+    } else if
+      (((i % 3) === 0) && ((i % 5) === 0 )){
+      return "FizzBuzz";
+    }
+  }
+}
+console.log(fizzbuzz(1));
 
 console.assert(fizzbuzz(1) === ".")
 console.assert(fizzbuzz(2) === "..")
@@ -128,4 +159,4 @@ console.assert(findLongestWord("don't mess with Texas") === "Texas")
 console.assert(GCD(5,1) === 1);
 console.assert(GCD(15,3) === 3);
 console.assert(GCD(15,5) === 5);
-console.assert(GCD(50,20) === 10);
+console.assert(GCD(50,10))
